@@ -1,0 +1,28 @@
+-- disable netrw at the very start of your init.lua
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
+
+-- OR setup with some options
+-- require("nvim-tree").setup({
+--   view = {
+--     width = 30,
+--     float = {
+--       enable = true,
+--       open_win_config = {
+--        relative = "editor",
+--         width = 30,
+--         height = 30,
+--         row = 8,
+--         column = 35,
+--       }
+--     }
+--   },
+--   renderer = {
+--     group_empty = true,
+--   }
+-- })
+--
+-- vim.keymap.set('n', 'tt', '<Cmd>NvimTreeToggle<CR>', {})
+-- vim.keymap.set('n', 'tcl', '<Cmd>NvimTreeCollapse<CR>', {})
+-- vim.keymap.set('n', 'T', '<Cmd>NvimTreeFocus<CR>', {})
+--

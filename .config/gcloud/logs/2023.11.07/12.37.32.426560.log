@@ -1,0 +1,8 @@
+2023-11-07 12:37:32,428 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2023-11-07 12:37:32,429 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'configurations']
+2023-11-07 12:37:32,432 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'configurations', 'describe']
+2023-11-07 12:37:32,433 DEBUG    root            Running [gcloud.config.configurations.describe] with arguments: [--format: "value[separator=""](properties.core.account,properties.core.project)", CONFIGURATION_NAME: "s-nakaue"]
+2023-11-07 12:37:32,434 INFO     root            Display format: "default value[separator=""](properties.core.account,properties.core.project)"
+2023-11-07 12:37:32,434 INFO     ___FILE_ONLY___ s-nakaue@glad-cube.comfastest-prod
+
+2023-11-07 12:37:32,439 DEBUG    root            Metrics reporting process started...

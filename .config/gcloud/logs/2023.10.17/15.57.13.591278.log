@@ -1,0 +1,15 @@
+2023-10-17 15:57:13,592 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2023-10-17 15:57:13,599 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'describe']
+2023-10-17 15:57:13,600 DEBUG    root            Running [gcloud.projects.describe] with arguments: [--account: "s-nakaue@glad-cube.com", --configuration: "s-nakaue", --format: "value(name)", PROJECT_ID_OR_NUMBER: "fastest-prod"]
+2023-10-17 15:57:14,117 DEBUG    google.auth.transport.requests Making request: POST https://oauth2.googleapis.com/token
+2023-10-17 15:57:14,153 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2023-10-17 15:57:14,306 DEBUG    urllib3.connectionpool https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2023-10-17 15:57:14,388 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2023-10-17 15:57:14,663 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1/projects/fastest-prod?alt=json HTTP/1.1" 200 None
+2023-10-17 15:57:14,668 INFO     root            Display format: "default value(name)"
+2023-10-17 15:57:14,669 INFO     ___FILE_ONLY___ fastest-prod
+
+2023-10-17 15:57:14,676 DEBUG    root            Checking for updates...
+2023-10-17 15:57:14,692 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): dl.google.com:443
+2023-10-17 15:57:14,807 DEBUG    urllib3.connectionpool https://dl.google.com:443 "GET /dl/cloudsdk/channels/rapid/components-2.json HTTP/1.1" 200 209941
+2023-10-17 15:57:14,866 DEBUG    root            Metrics reporting process started...

@@ -1,0 +1,12 @@
+2023-11-02 14:39:27,016 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2023-11-02 14:39:27,027 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'describe']
+2023-11-02 14:39:27,029 DEBUG    root            Running [gcloud.projects.describe] with arguments: [--account: "s-nakaue@glad-cube.com", --configuration: "s-nakaue", --format: "value(name)", PROJECT_ID_OR_NUMBER: "fastest-prod"]
+2023-11-02 14:39:27,188 DEBUG    google.auth.transport.requests Making request: POST https://oauth2.googleapis.com/token
+2023-11-02 14:39:27,245 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2023-11-02 14:39:27,440 DEBUG    urllib3.connectionpool https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2023-11-02 14:39:27,597 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2023-11-02 14:39:28,570 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1/projects/fastest-prod?alt=json HTTP/1.1" 200 None
+2023-11-02 14:39:28,573 INFO     root            Display format: "default value(name)"
+2023-11-02 14:39:28,574 INFO     ___FILE_ONLY___ fastest-prod
+
+2023-11-02 14:39:28,606 DEBUG    root            Metrics reporting process started...
