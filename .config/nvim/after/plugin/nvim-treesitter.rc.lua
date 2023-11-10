@@ -19,6 +19,8 @@ ts.setup {
     "html",
     "lua",
     "go",
+    "markdown",
+    "markdown_inline"
   },
   autotag = {
     enable = true,

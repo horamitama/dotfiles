@@ -39,13 +39,15 @@ return require('packer').startup(function(use)
   
   -- git
   use 'lewis6991/gitsigns.nvim'
+  use 'rhysd/git-messenger.vim'
+  use 'airblade/vim-gitgutter'
 
   -- lsp
   use 'neovim/nvim-lspconfig'
   
   use ({
-    'nvimdev/lspsaga.nvim',
-    after = 'nvim-lspconfig',
+      'nvimdev/lspsaga.nvim',
+      after = 'nvim-lspconfig',
   })
 
   use 'gkz/vim-ls' -- LiveScript
