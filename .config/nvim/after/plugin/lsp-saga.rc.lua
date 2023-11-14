@@ -6,7 +6,10 @@
 --     typescript = 'typescript'
 --   }
 -- }
-require('lspsaga').setup({})
+local status, lspsaga = pcall(require, "lspsaga")
+if(not stauts) then return end
+
+lspsaga.setup({})
 
 local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)

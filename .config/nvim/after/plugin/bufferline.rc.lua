@@ -1,4 +1,7 @@
-local highlights = require("nord").bufferline.highlights({
+local status, highlights = pcall(require, "bufferline")
+if(not status) then return end
+
+highlights = require("nord").bufferline.highlights({
     italic = true,
     bold = true,
     fill = "#181c24"

@@ -1,4 +1,4 @@
-local lspconfig = require('lspconfig')
+local status, lspconfig = pcall(require, "lspconfig")
 
 lspconfig.tsserver.setup {
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },

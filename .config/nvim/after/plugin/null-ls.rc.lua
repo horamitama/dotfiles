@@ -1,4 +1,5 @@
-local null_ls = require("null-ls")
+local status, null_ls = pcall(require, "null_ls") 
+if(not status) then return end
 
 local group = vim.api.nvim_create_augroup("lsp_format_on_save", { clear = false })
 local event = "BufWritePre" -- or "BufWritePost"

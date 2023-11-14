@@ -38,7 +38,7 @@ return require('packer').startup(function(use)
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
   
   -- git
-  use 'lewis6991/gitsigns.nvim'
+  -- use 'lewis6991/gitsigns.nvim'
   use 'rhysd/git-messenger.vim'
   use 'airblade/vim-gitgutter'
 
