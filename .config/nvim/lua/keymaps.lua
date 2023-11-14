@@ -9,6 +9,8 @@ keymap.set('', 'sk', '<C-w>k')
 keymap.set('', 'sj', '<C-w>j')
 keymap.set('', 'sl', '<C-w>l')
 
+keymap.set('n', 'bd', ':bdelete<CR>')
+
 keymap.set('n', '<leader>gm', ':GitMessenger')
 
 keymap.set('n', '<C-l>', '<Cmd>echom b:_copilot<CR>')

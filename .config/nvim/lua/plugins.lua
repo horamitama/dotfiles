@@ -45,10 +45,7 @@ return require('packer').startup(function(use)
   -- lsp
   use 'neovim/nvim-lspconfig'
   
-  use ({
-      'nvimdev/lspsaga.nvim',
-      after = 'nvim-lspconfig',
-  })
+  use 'nvimdev/lspsaga.nvim'
 
   use 'gkz/vim-ls' -- LiveScript
   use 'jose-elias-alvarez/null-ls.nvim'
