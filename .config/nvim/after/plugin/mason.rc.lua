@@ -1,5 +1,11 @@
-local stauts, mason = pcall(require, "mason")
+local status, mason = pcall(require, "mason")
 if(not status) then return end
 
-mason.setup({})
-require("mason-lspconfig").setup()
+local lspconfig = pcall(require, "mason-lspconfig") 
+if(not lspconfig) then return end
+
+mason.setup()
+
+-- lspconfig.setup({
+--   ensure_installed = {"sumneko_lua", "tailwindcss"},
+-- })

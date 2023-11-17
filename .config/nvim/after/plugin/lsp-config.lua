@@ -18,6 +18,8 @@ lspconfig.gopls.setup({
   },
 })
 
+lspconfig.html.setup {}
+
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*.go",
   callback = function()
