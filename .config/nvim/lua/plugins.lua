@@ -11,7 +11,8 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
 
   -- color scheme 
-  use 'shaunsingh/nord.nvim'
+  -- use 'shaunsingh/nord.nvim'
+  use 'gbprod/nord.nvim'
 
   -- status line
   use {

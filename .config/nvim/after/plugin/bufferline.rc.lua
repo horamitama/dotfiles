@@ -1,17 +1,11 @@
 local status, highlights = pcall(require, "bufferline")
 if(not status) then return end
 
-highlights = require("nord").bufferline.highlights({
-    italic = true,
-    bold = true,
-    fill = "#181c24"
-})
-
 require("bufferline").setup({
     options = {
-        separator_style = "slant",
+        separator_style = "thin",
     },
-    highlights = highlights,
+    highlights = require("nord.plugins.bufferline").akinsho(),
 })
 
 vim.keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', {})
