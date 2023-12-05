@@ -14,3 +14,5 @@ keymap.set('n', 'bd', ':bdelete<CR>')
 keymap.set('n', '<leader>gm', ':GitMessenger')
 
 keymap.set('n', '<C-l>', '<Cmd>echom b:_copilot<CR>')
+
+keymap.set('n', 'noh', ':noh<CR>')
