@@ -1,9 +1,0 @@
-2023-11-08 17:59:45,097 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
-2023-11-08 17:59:45,099 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'describe']
-2023-11-08 17:59:45,100 DEBUG    root            Running [gcloud.projects.describe] with arguments: [--account: "s-nakaue@glad-cube.com", --configuration: "s-nakaue", --format: "value(name)", PROJECT_ID_OR_NUMBER: "fastest-prod"]
-2023-11-08 17:59:45,116 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
-2023-11-08 17:59:45,844 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1/projects/fastest-prod?alt=json HTTP/1.1" 200 None
-2023-11-08 17:59:45,845 INFO     root            Display format: "default value(name)"
-2023-11-08 17:59:45,846 INFO     ___FILE_ONLY___ fastest-prod
-
-2023-11-08 17:59:45,850 DEBUG    root            Metrics reporting process started...
