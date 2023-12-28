@@ -1,25 +1,13 @@
--- local status, saga = pcall(require, "lspsaga")
--- if (not status) then return end
---
--- saga.init_lsp_saga {
---   server_filetype_map = {
---     typescript = 'typescript'
---   }
--- }
 local status, lspsaga = pcall(require, "lspsaga")
-if(not stauts) then return end
+if(not status) then return end 
+local config = lspsaga.setup()
 
-local floaterm = require("lspsaga.floaterm")
-
-lspsaga.setup()
-
-local opts = { noremap = true, silent = true }
-vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
-vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
-vim.keymap.set('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
-vim.keymap.set('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
-vim.keymap.set('n', 'gp', '<Cmd>Lspsaga preview_definition<CR>', opts)
-vim.keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
-vim.keymap.set('n', 'gd', '<Cmd>Lspsaga goto_definition<CR>', opts)
-vim.keymap.set('n', 'gt', '<cmd>Lspsaga term_toggle<CR>', opts)
+-- vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', {})
+vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', {})
+vim.keymap.set('n', '<leader>gf', '<Cmd>Lspsaga finder def+ref<CR>', {})
+-- vim.keymap.set('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', {})
+vim.keymap.set('n', '<leader>gp', '<Cmd>Lspsaga peek_type_definition<CR>', {})
+vim.keymap.set('n', '<leader>gr', '<Cmd>Lspsaga rename<CR>', {})
+vim.keymap.set('n', '<leader>gd', '<Cmd>Lspsaga goto_definition<CR>', {})
+vim.keymap.set('n', '<leader>gt', '<Cmd>Lspsaga term_toggle<CR>', {})
 

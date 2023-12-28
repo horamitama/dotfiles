@@ -11,7 +11,6 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
 
   -- color scheme 
-  -- use 'shaunsingh/nord.nvim'
   use 'gbprod/nord.nvim'
 
   -- status line
@@ -19,6 +18,9 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+
+  -- indent line
+  use "lukas-reineke/indent-blankline.nvim"
 
   -- fuzzy finder
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.4' }
@@ -46,7 +48,9 @@ return require('packer').startup(function(use)
   -- lsp
   use 'neovim/nvim-lspconfig'
   
-  use 'nvimdev/lspsaga.nvim'
+  use ({'nvimdev/lspsaga.nvim',
+    after = 'nvim-lspconfig',
+  })
 
   use 'gkz/vim-ls' -- LiveScript
   use 'jose-elias-alvarez/null-ls.nvim'
