@@ -1,4 +1,0 @@
-2023-11-22 12:04:18,040 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
-2023-11-22 12:04:18,044 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'describe']
-2023-11-22 12:04:18,046 DEBUG    root            Running [gcloud.projects.describe] with arguments: [--account: "s-nakaue@glad-cube.com", --configuration: "s-nakaue", --format: "value(name)", PROJECT_ID_OR_NUMBER: "fastest-prod"]
-2023-11-22 12:04:18,071 DEBUG    google.auth.transport.requests Making request: POST https://oauth2.googleapis.com/token
