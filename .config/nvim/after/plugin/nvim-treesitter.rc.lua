@@ -21,7 +21,8 @@ ts.setup {
     "lua",
     "go",
     "markdown",
-    "markdown_inline"
+    "markdown_inline",
+    "terraform",
   },
   autotag = {
     enable = true,

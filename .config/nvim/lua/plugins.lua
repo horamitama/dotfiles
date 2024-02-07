@@ -47,6 +47,7 @@ return require('packer').startup(function(use)
 
   -- lsp
   use 'neovim/nvim-lspconfig'
+  use 'lspcontainers/lspcontainers.nvim'
   
   use ({'nvimdev/lspsaga.nvim',
     after = 'nvim-lspconfig',
