@@ -1,3 +1,7 @@
+-- netrwの無効化
+vim.api.nvim_set_var('loaded_netrw', 1)
+vim.api.nvim_set_var('loaded_netrwPlugin', 1)
+
 vim.opt.fileencoding = "utf-8" 
 vim.opt.swapfile = false 
 vim.opt.hidden = true 
@@ -32,3 +36,4 @@ vim.opt.winblend = 20
 vim.opt.pumblend = 20 
 vim.opt.showtabline = 2 
 vim.opt.signcolumn = "yes" 
+

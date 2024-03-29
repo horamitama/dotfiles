@@ -18,12 +18,6 @@ lspconfig.gopls.setup({
   },
 })
 
-lspconfig.html.setup {}
-
-lspconfig.tailwindcss.setup {}
-
-lspconfig.terraformls.setup {}
-
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*.go",
   callback = function()
@@ -46,3 +40,10 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     vim.lsp.buf.format({async = false})
   end
 })
+
+lspconfig.html.setup {}
+
+lspconfig.tailwindcss.setup {}
+
+lspconfig.terraformls.setup {}
+

@@ -23,8 +23,11 @@ return require('packer').startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
 
   -- fuzzy finder
-  use { 'nvim-telescope/telescope.nvim', tag = '0.1.4' }
-  use "nvim-telescope/telescope-file-browser.nvim"
+  -- use { 'nvim-telescope/telescope.nvim', tag = '0.1.4' }
+  -- use "nvim-telescope/telescope-file-browser.nvim"
+  
+  -- nvim-tree
+  use 'nvim-tree/nvim-tree.lua'
 
   -- syntax highlight
   use 'nvim-treesitter/nvim-treesitter'
