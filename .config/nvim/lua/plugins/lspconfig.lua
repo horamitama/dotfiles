@@ -78,7 +78,7 @@ return {
         return true
       end,
 
-      go = function(server, opts) end,
+      -- go = function(server, opts) end,
       -- Specify * to use this function as a fallback for any server
       -- ["*"] = function(server, opts) end,
     },
