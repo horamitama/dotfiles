@@ -10,7 +10,6 @@ return {
         "go",
         "typescript",
         "tsx",
-        "jsx",
         "lua",
         "luadoc",
         "luap",
@@ -42,6 +41,8 @@ return {
         "gomod",
         "gowork",
         "gosum",
+        "typescript",
+        "tsx",
       })
     end,
   },

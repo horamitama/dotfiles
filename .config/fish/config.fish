@@ -1,9 +1,10 @@
 if status is-interactive
-  eval (/opt/homebrew/bin/brew shellenv)
+    eval (/opt/homebrew/bin/brew shellenv)
 end
 
-alias v "nvim"
-alias g "git"
+alias v nvim
+alias g git
+alias e exit
 
 # Prompt options
 set -g theme_nerd_fonts yes
