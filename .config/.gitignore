@@ -5,3 +5,5 @@ github-copilot/
 configstore/
 
 nvim/lazy-lock.json
+
+fish/themes/fish_variables
