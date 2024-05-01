@@ -16,6 +16,7 @@ set -g theme_display_node yes
 # set -g theme_display_k8s_context yes
 set -g theme_display_k8s_namespace yes
 set -g theme_display_git yes
+set -g theme_display_git_default_branch yes
 
 # Right prompt options
 set -g theme_date_format +%m/%d-%H:%M:%S
