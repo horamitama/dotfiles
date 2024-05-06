@@ -20,6 +20,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     -- { import = "lazyvim.plugins.extras.coding.copilot" },
     { import = "plugins" },
+    { import = "lazyvim.plugins.extras.lang.go" },
   },
   defaults = {
     lazy = false,

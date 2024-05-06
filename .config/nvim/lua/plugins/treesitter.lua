@@ -7,9 +7,6 @@ return {
       indent = { enable = true },
       mode = { "cursor", max_lines = 3 },
       ensure_installed = {
-        "go",
-        "typescript",
-        "tsx",
         "lua",
         "luadoc",
         "luap",
@@ -37,10 +34,6 @@ return {
       })
       vim.treesitter.language.register("markdown", "mdx")
       vim.list_extend(opts.ensure_installed, {
-        "go",
-        "gomod",
-        "gowork",
-        "gosum",
         "typescript",
         "tsx",
       })
