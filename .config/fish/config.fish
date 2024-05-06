@@ -5,6 +5,7 @@ end
 alias v nvim
 alias g git
 alias e exit
+alias ls ls -a
 
 # Prompt options
 set -g theme_nerd_fonts yes
