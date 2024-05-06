@@ -3,9 +3,10 @@ if status is-interactive
 end
 
 alias v nvim
+alias vim nvim
 alias g git
 alias e exit
-alias ls ls -a
+alias c clear
 
 # Prompt options
 set -g theme_nerd_fonts yes
