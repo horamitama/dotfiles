@@ -30,7 +30,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.util.dot" },
     { import = "plugins" },
   },
-  print("hoge"),
   defaults = {
     lazy = false,
     version = false, -- always use the latest git commit
