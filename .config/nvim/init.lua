@@ -1,2 +1,10 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
+local user = os.getenv("USER")
+
+if user == "horamitama" then
+  require("pawpunch.lazy")
+elseif user == "gc" then
+  require("gc.lazy")
+else
+  print("user not found.")
+  return
+end
