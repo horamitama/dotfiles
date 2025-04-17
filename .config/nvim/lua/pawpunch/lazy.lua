@@ -27,6 +27,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.editor.illuminate" },
     { import = "lazyvim.plugins.extras.lang.yaml" },
     { import = "lazyvim.plugins.extras.util.dot" },
+    { import = "lazyvim.plugins.extras.lang.clangd" },
+    { import = "lazyvim.plugins.extras.editor.telescope" },
     { import = "pawpunch.plugins" },
   },
   defaults = {
@@ -50,3 +52,5 @@ require("lazy").setup({
     },
   },
 })
+
+vim.g.snacks_animate = false

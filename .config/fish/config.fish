@@ -8,6 +8,7 @@ alias g git
 alias e exit
 alias c clear
 alias t tmux
+alias k kubectl
 
 # Prompt options
 set -g theme_nerd_fonts yes
