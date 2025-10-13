@@ -29,3 +29,5 @@ set -g theme_date_format +%m/%d-%H:%M:%S
 if [ -f '/Users/s-nakaue/.gcloud/google-cloud-sdk/path.fish.inc' ]
     . '/Users/s-nakaue/.gcloud/google-cloud-sdk/path.fish.inc'
 end
+
+string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)

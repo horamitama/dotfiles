@@ -9,3 +9,5 @@
 /.config/github-copilot
 
 /.config/iterm2
+
+node_modules/
