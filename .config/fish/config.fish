@@ -9,6 +9,7 @@ alias e exit
 alias c clear
 alias t tmux
 alias k kubectl
+alias ls "ls -a"
 
 # Prompt options
 set -g theme_nerd_fonts yes
@@ -30,4 +31,4 @@ if [ -f '/Users/s-nakaue/.gcloud/google-cloud-sdk/path.fish.inc' ]
     . '/Users/s-nakaue/.gcloud/google-cloud-sdk/path.fish.inc'
 end
 
-string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)
+# string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)

@@ -1,6 +1,8 @@
 {
   "extras": [
     "lazyvim.plugins.extras.ai.copilot",
+    "lazyvim.plugins.extras.editor.telescope",
+    "lazyvim.plugins.extras.lang.ember",
     "lazyvim.plugins.extras.lang.toml"
   ],
   "install_version": 7,
