@@ -18,25 +18,23 @@ require("lazy").setup({
     { import = "plugins" },
   },
   defaults = {
-    lazy = false,
-    version = false, -- always use the latest git commit
+    lazy = true,
+    version = true, -- always use the latest git commit
   },
-  checker = { enabled = true }, -- automatically check for plugin updates
+  checker = { enabled = true },
   performance = {
     rtp = {
-      -- disable some rtp plugins
       disabled_plugins = {
         "gzip",
-        -- "matchit",
-        -- "matchparen",
-        -- "netrwPlugin",
+        "matchit",
+        "matchparen",
+        "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",
         "zipPlugin",
+        "fzf",
       },
     },
   },
 })
-
-vim.g.snacks_animate = false
