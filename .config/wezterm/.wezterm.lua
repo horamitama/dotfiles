@@ -15,4 +15,47 @@ config.scrollback_lines = 3500
 config.enable_scroll_bar = true
 config.window_decorations = "RESIZE"
 
+-- ---------------------------------------------------------
+-- キーバインド設定（画面分割など）
+-- ---------------------------------------------------------
+
+-- 「リーダーキー」を設定します
+-- これを押してから、別のキーを押すことでコマンドを実行します
+-- ここでは「Ctrl + a」をリーダーキーに設定しています（tmux風）
+config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
+
+config.keys = {
+	-- [Ctrl + a] -> [-] で画面を上下に分割
+	{
+		key = "-",
+		mods = "LEADER",
+		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+	-- [Ctrl + a] -> [|] (Shift + \) で画面を左右に分割
+	{
+		key = "|",
+		mods = "LEADER|SHIFT",
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	-- [Ctrl + a] -> [x] で現在のパネルを閉じる
+	{
+		key = "x",
+		mods = "LEADER",
+		action = wezterm.action.CloseCurrentPane({ confirm = true }),
+	},
+	-- [Ctrl + a] -> [h/j/k/l] でパネル間を移動（Vim風）
+	{ key = "h", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Left") },
+	{ key = "l", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Right") },
+	{ key = "k", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Up") },
+	{ key = "j", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Down") },
+}
+config.mouse_bindings = {
+	-- Cmdキー(WindowsならCtrl)を押しながらクリックするとリンクを開く
+	{
+		event = { Up = { streak = 1, button = "Left" } },
+		mods = "CMD",
+		action = wezterm.action.OpenLinkAtMouseCursor,
+	},
+}
+
 return config
