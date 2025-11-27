@@ -13,7 +13,7 @@ config.color_scheme = "nord"
 config.window_background_opacity = 0.95
 config.scrollback_lines = 3500
 config.enable_scroll_bar = true
-config.window_decorations = "RESIZE"
+-- config.window_decorations = "RESIZE"
 
 -- ---------------------------------------------------------
 -- キーバインド設定（画面分割など）
