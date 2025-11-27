@@ -19,7 +19,7 @@ require("lazy").setup({
   },
   defaults = {
     lazy = true,
-    version = true, -- always use the latest git commit
+    version = false, -- always use the latest git commit
   },
   checker = { enabled = true },
   performance = {
