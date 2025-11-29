@@ -2,13 +2,13 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.initial_cols = 120
-config.initial_rows = 28
+config.initial_rows = 50
 
-config.font = wezterm.font("Hack Nerd Font", { weight = "Regular", stretch = "Normal", style = "Normal" })
+config.font = wezterm.font("Hack Nerd Font", { weight = "Medium" })
 config.font_size = 15
 
 config.color_scheme = "nord"
--- config.harfbuzz_features = { "calt=0", "clig=0", "liga=0", "zero" }
+config.harfbuzz_features = { "calt=0", "clig=0", "liga=0", "zero" }
 
 config.window_background_opacity = 0.95
 config.scrollback_lines = 3500
@@ -48,6 +48,11 @@ config.keys = {
 	{ key = "l", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Right") },
 	{ key = "k", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Up") },
 	{ key = "j", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Down") },
+	{
+		key = "P",
+		mods = "CTRL",
+		action = wezterm.action.ActivateCommandPalette,
+	},
 }
 config.mouse_bindings = {
 	-- Cmdキー(WindowsならCtrl)を押しながらクリックするとリンクを開く
