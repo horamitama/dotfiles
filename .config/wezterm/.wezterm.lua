@@ -4,7 +4,11 @@ local config = wezterm.config_builder()
 config.initial_cols = 120
 config.initial_rows = 28
 
-config.font = wezterm.font("Hack Nerd Font", { weight = "Regular", stretch = "Normal", style = "Normal" })
+config.font = wezterm.font(
+	"Hack Nerd Font",
+	{ weight = "Regular", stretch = "Normal", style = "Normal" },
+	"Hiragino Kaku Gothic ProN"
+)
 config.font_size = 15
 
 config.color_scheme = "nord"
