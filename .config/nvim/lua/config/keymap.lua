@@ -28,3 +28,13 @@ map("x", "p", [["_dP]])
 -- デフォルトではHは画面上部、Lは画面下部ですが、行頭(^)と行末($)にした方がコーディングでは便利です
 map("n", "H", "^", { desc = "Go to Start of Line" })
 map("n", "L", "$", { desc = "Go to End of Line" })
+
+-- <leader>tv でターミナルを右側に開く
+map("n", "<leader>tv", function()
+	Snacks.terminal(nil, { win = { position = "right" } })
+end, { desc = "Terminal (Vertical/Right)" })
+
+-- Ctrl + / でターミナルを「右側」に開く
+-- map({ "n", "t" }, "<C-/>", function()
+-- 	Snacks.terminal(nil, { win = { position = "right" } })
+-- end, { desc = "Terminal (Vertical/Right)" })
