@@ -14,7 +14,7 @@ config.color_scheme = "nord"
 -- config.harfbuzz_features = { "calt=0", "clig=0", "liga=0", "zero" }
 config.adjust_window_size_when_changing_font_size = false
 
-config.window_background_opacity = 0.95
+config.window_background_opacity = 0.85
 config.scrollback_lines = 3500
 config.enable_scroll_bar = true
 -- config.window_decorations = "RESIZE"
