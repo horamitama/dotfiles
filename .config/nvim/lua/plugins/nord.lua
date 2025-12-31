@@ -6,6 +6,5 @@ return {
     require("nord").setup({
       transparent = true,
     })
-    vim.cmd.colorscheme("nord")
   end,
 }

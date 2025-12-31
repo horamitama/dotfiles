@@ -5,10 +5,10 @@ font-size = 14
 
 # --- 背景・透過設定 ---
 # 0.0〜1.0 で指定 (0.9くらいが実用的です)
-background-opacity = 0.8
+background-opacity = 0.85
 
 # 透過した時に背景をぼかす設定 (Macらしくなり、文字が見やすくなります)
-background-blur-radius = 20
+background-blur-radius = 10
 
 # --- ウィンドウ設定 (お好みで) ---
 # タイトルバーを背景に馴染ませてミニマムにする設定
