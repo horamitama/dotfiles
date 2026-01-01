@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 config.initial_cols = 120
 config.initial_rows = 50
 config.window_background_opacity = 0.85
-config.macos_window_background_blur = 10
+config.macos_window_background_blur = 20 
 config.color_scheme = "nord"
 config.use_ime = true
 
@@ -60,52 +60,9 @@ config.window_background_gradient = {
 	colors = { "#2e3440" },
 }
 
--- ---------------------------------------------------------
--- キーバインド設定（画面分割など）
--- ---------------------------------------------------------
-
--- 「リーダーキー」を設定します
--- これを押してから、別のキーを押すことでコマンドを実行します
--- ここでは「Ctrl + a」をリーダーキーに設定しています（tmux風）
-config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
-
-config.keys = {
-	-- [Ctrl + a] -> [-] で画面を上下に分割
-	{
-		key = "-",
-		mods = "LEADER",
-		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
-	},
-	-- [Ctrl + a] -> [|] (Shift + \) で画面を左右に分割
-	{
-		key = "|",
-		mods = "LEADER|SHIFT",
-		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-	},
-	-- [Ctrl + a] -> [x] で現在のパネルを閉じる
-	{
-		key = "x",
-		mods = "LEADER",
-		action = wezterm.action.CloseCurrentPane({ confirm = true }),
-	},
-	-- [Ctrl + a] -> [h/j/k/l] でパネル間を移動（Vim風）
-	{ key = "h", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Left") },
-	{ key = "l", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Right") },
-	{ key = "k", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Up") },
-	{ key = "j", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Down") },
-	{
-		key = "P",
-		mods = "CTRL",
-		action = wezterm.action.ActivateCommandPalette,
-	},
-}
-config.mouse_bindings = {
-	-- Cmdキー(WindowsならCtrl)を押しながらクリックするとリンクを開く
-	{
-		event = { Up = { streak = 1, button = "Left" } },
-		mods = "CMD",
-		action = wezterm.action.OpenLinkAtMouseCursor,
-	},
-}
+config.keys = require("keybinds").keys
+config.key_tables = require("keybinds").key_tables
+config.disable_default_key_bindings = true
+config.leader = { key = "g", mods = "CTRL", timeout_milliseconds = 2001 }
 
 return config
