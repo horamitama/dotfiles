@@ -1,37 +1,20 @@
 return {
 	{
-		"neovim/nvim-lspconfig",
+		"williamboman/mason.nvim",
+		cmd = "Mason",
+		build = ":MasonUpdate",
+		opts = {},
+	},
+	{
+		"williamboman/mason-lspconfig.nvim",
+		dependencies = { "mason.nvim" },
 		opts = {
-			inlay_hints = { enabled = false },
-			servers = {
-				vtsls = {
-					settings = {
-						typescript = {
-							inlayHints = {
-								parameterNames = { enabled = "literals" },
-								parameterTypes = { enabled = true },
-								variableTypes = { enabled = false },
-								propertyDeclarationTypes = { enabled = true },
-								functionLikeReturnTypes = { enabled = true },
-								enumMemberValues = { enabled = true },
-							},
-						},
-					},
-				},
-				gopls = {
-					settings = {
-						gopls = {
-							analyses = {
-								unusedparams = true,
-								shadow = true,
-							},
-							staticcheck = true,
-							gofumpt = true,
-							usePlaceholders = true,
-						},
-					},
-				},
+			ensure_installed = {
+				"lua_ls",
+				"ts_ls",
+				"gopls",
 			},
+			automatic_installation = true,
 		},
 	},
 	{ "gkz/vim-ls" },
