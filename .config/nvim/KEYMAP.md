@@ -87,3 +87,4 @@ Leader key: `<Space>`
 |-----|------|-------------|
 | `<C-/>` | Normal/Terminal | Toggle floating terminal |
 | `<leader>tv` | Normal | Open vertical terminal (right) |
+
