@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 config.initial_cols = 120
 config.initial_rows = 50
 config.window_background_opacity = 0.85
-config.macos_window_background_blur = 20 
+config.macos_window_background_blur = 20
 config.color_scheme = "nord"
 config.use_ime = true
 
@@ -16,6 +16,17 @@ config.font_size = 14
 
 config.adjust_window_size_when_changing_font_size = false
 config.window_decorations = "RESIZE"
+
+-- 外付けディスプレイでのスリープ復帰問題対策
+config.native_macos_fullscreen_mode = false
+config.send_composed_key_when_left_alt_is_pressed = false
+config.send_composed_key_when_right_alt_is_pressed = false
+
+-- ウィンドウサイズ復元イベント
+wezterm.on("window-resized", function(window, pane)
+	local overrides = window:get_config_overrides() or {}
+	window:set_config_overrides(overrides)
+end)
 
 config.hide_tab_bar_if_only_one_tab = false
 config.window_frame = {

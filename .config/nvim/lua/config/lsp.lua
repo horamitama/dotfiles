@@ -16,37 +16,30 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
--- LSP server configs
-vim.lsp.config["lua_ls"] = {
+-- Lua
+vim.lsp.config.lua_ls = {
 	cmd = { "lua-language-server" },
 	filetypes = { "lua" },
 	root_markers = { ".luarc.json", ".luarc.jsonc", ".git" },
 	settings = {
 		Lua = {
-			workspace = { checkThirdParty = false },
+			runtime = { version = "LuaJIT" },
+			workspace = {
+				checkThirdParty = false,
+				library = vim.api.nvim_get_runtime_file("", true),
+			},
+			diagnostics = { globals = { "vim" } },
 			telemetry = { enable = false },
 		},
 	},
 }
 
-vim.lsp.config["ts_ls"] = {
+-- TypeScript
+vim.lsp.config.ts_ls = {
 	cmd = { "typescript-language-server", "--stdio" },
 	filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
 	root_markers = { "tsconfig.json", "jsconfig.json", "package.json", ".git" },
 }
 
-vim.lsp.config["gopls"] = {
-	cmd = { "gopls" },
-	filetypes = { "go", "gomod", "gowork", "gotmpl" },
-	root_markers = { "go.mod", "go.work", ".git" },
-	settings = {
-		gopls = {
-			analyses = { unusedparams = true, shadow = true },
-			staticcheck = true,
-			gofumpt = true,
-		},
-	},
-}
-
 -- Enable LSP servers
-vim.lsp.enable({ "lua_ls", "ts_ls", "gopls" })
+vim.lsp.enable({ "lua_ls", "ts_ls" })

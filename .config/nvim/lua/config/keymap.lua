@@ -18,17 +18,12 @@ map("n", "<Esc><Esc>", "<cmd>nohlsearch<cr>", { desc = "Clear hlsearch" })
 -- Paste without overwriting register
 map("x", "p", [["_dP]])
 
--- Line navigation with H/L
-map("n", "H", "^", { desc = "Go to Start of Line" })
-map("n", "L", "$", { desc = "Go to End of Line" })
-
 -- Window navigation with Ctrl+h/j/k/l
 map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window" })
 map("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window" })
 map("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window" })
 map("n", "<C-k>", "<C-w>k", { desc = "Go to Upper Window" })
 
--- Terminal (vertical right)
--- map("n", "<leader>tv", function()
--- 	Snacks.terminal(nil, { win = { position = "right" } })
--- end, { desc = "Terminal (Vertical/Right)" })
+-- Buffer
+map("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Close Buffer" })
+
