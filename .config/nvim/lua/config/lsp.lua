@@ -11,8 +11,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		map("n", "<leader>ca", vim.lsp.buf.code_action, "Code Action")
 		map("n", "<leader>cr", vim.lsp.buf.rename, "Rename")
 		map("n", "<leader>cd", vim.diagnostic.open_float, "Line Diagnostics")
-		map("n", "]d", vim.diagnostic.goto_next, "Next Diagnostic")
-		map("n", "[d", vim.diagnostic.goto_prev, "Prev Diagnostic")
+		-- deprecated
+		-- map("n", "]d", vim.diagnostic.goto_next, "Next Diagnostic")
+		-- map("n", "[d", vim.diagnostic.goto_prev, "Prev Diagnostic")
 	end,
 })
 
