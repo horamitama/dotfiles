@@ -3,7 +3,7 @@ return {
 	version = "*",
 	opts = {
 		size = 20,
-		-- open_mapping = [[<c-\>]], -- これで Ctrl + \ で開閉できるようになります
+		open_mapping = [[<c-/>]], -- これで Ctrl + \ で開閉できるようになります
 		hide_numbers = true,
 		shade_filetypes = {},
 		shade_terminals = true,

@@ -32,3 +32,4 @@ if [ -f '/Users/s-nakaue/.gcloud/google-cloud-sdk/path.fish.inc' ]
 end
 
 # string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)
+export PATH="/opt/homebrew/opt/mysql-client@8.0/bin:$PATH"
