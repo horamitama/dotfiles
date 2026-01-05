@@ -13,8 +13,13 @@ return {
 			ensure_installed = {
 				"lua_ls",
 				"ts_ls",
+				"jdtls",
+				"yamlls",
+				"gopls",
+				"terraformls",
 			},
 			automatic_installation = true,
 		},
 	},
+	{ "gkz/vim-ls", lazy = false },
 }

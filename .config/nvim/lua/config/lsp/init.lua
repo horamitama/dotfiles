@@ -5,6 +5,10 @@ require("config.lsp.keymaps")
 local servers = {
 	lua_ls = require("config.lsp.servers.lua_ls"),
 	ts_ls = require("config.lsp.servers.ts_ls"),
+	jdtls = require("config.lsp.servers.jdtls"),
+	yamlls = require("config.lsp.servers.yamlls"),
+	gopls = require("config.lsp.servers.gopls"),
+	terraformls = require("config.lsp.servers.terraformls"),
 }
 
 -- Configure each LSP server
