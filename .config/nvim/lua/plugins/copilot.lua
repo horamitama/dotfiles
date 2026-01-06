@@ -7,7 +7,7 @@ return {
 			enabled = true,
 			auto_trigger = true,
 			keymap = {
-				accept = "<Tab>",
+				accept = "<C-y>",
 				accept_word = "<C-Right>",
 				accept_line = "<C-Down>",
 				next = "<M-]>",
