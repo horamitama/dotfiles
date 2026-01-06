@@ -12,7 +12,7 @@ return {
 		opts = {
 			ensure_installed = {
 				"lua_ls",
-				"ts_ls",
+				"vtsls",
 				"jdtls",
 				"yamlls",
 				"gopls",
@@ -58,11 +58,24 @@ return {
 			}
 
 			-- TypeScript/JavaScript
-			vim.lsp.config.ts_ls = {
-				cmd = { "typescript-language-server", "--stdio" },
+			vim.lsp.config.vtsls = {
+				cmd = { "vtsls", "--stdio" },
 				filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
-				root_markers = { "package.json", "tsconfig.json", "jsconfig.json" },
+				-- vtsls は通常 tsconfig.json などを基点にします
+				root_markers = { "tsconfig.json", "package.json", ".git" },
 				capabilities = capabilities,
+				settings = {
+					typescript = {
+						inlayHints = {
+							parameterNames = { enabled = "literals" },
+							parameterTypes = { enabled = true },
+							variableTypes = { enabled = true },
+							propertyDeclarationTypes = { enabled = true },
+							functionLikeReturnTypes = { enabled = true },
+							enumMemberValues = { enabled = true },
+						},
+					},
+				},
 			}
 
 			-- Go
@@ -98,7 +111,7 @@ return {
 			}
 
 			-- Enable LSP for configured servers
-			vim.lsp.enable({ "pyright", "lua_ls", "ts_ls", "gopls", "yamlls", "jdtls", "terraformls" })
+			vim.lsp.enable({ "pyright", "lua_ls", "vtsls", "gopls", "yamlls", "jdtls", "terraformls" })
 		end,
 	},
 	{ "gkz/vim-ls", lazy = false },
