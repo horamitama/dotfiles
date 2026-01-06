@@ -25,7 +25,7 @@ map("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window" })
 map("n", "<C-k>", "<C-w>k", { desc = "Go to Upper Window" })
 
 -- Buffer
-map("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Close Buffer" })
+map("n", "<leader>bd", "<cmd>:bd<cr>", { desc = "Close Buffer" })
 
 -- Lazy
 map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
