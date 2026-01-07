@@ -15,7 +15,7 @@ config.font = wezterm.font_with_fallback({
 config.font_size = 14
 
 config.adjust_window_size_when_changing_font_size = false
-config.window_decorations = "RESIZE"
+-- config.window_decorations = "RESIZE"
 
 -- 外付けディスプレイでのスリープ復帰問題対策
 config.native_macos_fullscreen_mode = false
