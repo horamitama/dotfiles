@@ -1,35 +1,36 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	build = ":TSUpdate",
-	lazy = false,
+	build = ":TSUpdate", -- 自動更新はここでやるので、configの中には書かない
+	event = { "BufReadPost", "BufNewFile" },
+	init = function(plugin)
+		-- クエリ関連のハック（LazyVim由来のものがあれば残す）
+		require("lazy.core.loader").add_to_rtp(plugin)
+		require("nvim-treesitter.query_predicates")
+	end,
+	-- mainのconfig関数
 	config = function()
-		require("nvim-treesitter").setup({
-			install_dir = vim.fn.stdpath("data") .. "/site",
-		})
-		-- パーサーをインストール
-		require("nvim-treesitter").install({
-			"lua",
-			"typescript",
-			"tsx",
-			"javascript",
-			"go",
-			"html",
-			"css",
-			"json",
-			"yaml",
-			"markdown",
-			"markdown_inline",
-			"bash",
-			"vim",
-			"vimdoc",
-			"python",
-		})
-		-- ハイライトを有効化
-		vim.api.nvim_create_autocmd("FileType", {
-			pattern = "*",
-			callback = function()
-				pcall(vim.treesitter.start)
-			end,
+		require("nvim-treesitter.configs").setup({
+			ensure_installed = {
+				"lua",
+				"typescript",
+				"tsx",
+				"javascript",
+				"yaml",
+				"html",
+				"css",
+				"markdown",
+				"markdown_inline",
+				"bash",
+				"json",
+			},
+			-- 自動インストールを有効にする
+			auto_install = true,
+			highlight = {
+				enable = true,
+			},
+			indent = {
+				enable = true,
+			},
 		})
 	end,
 }
