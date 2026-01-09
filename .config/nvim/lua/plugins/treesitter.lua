@@ -22,6 +22,8 @@ return {
 				"markdown_inline",
 				"bash",
 				"json",
+				"terraform",
+				"hcl",
 			},
 			-- 自動インストールを有効にする
 			auto_install = true,
