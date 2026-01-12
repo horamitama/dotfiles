@@ -2,7 +2,7 @@ local map = vim.keymap.set
 
 -- Save and quit
 map("n", "<leader>w", "<cmd>w<cr>", { desc = "Save File" })
-map("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit" })
+map("n", "<leader>q", "<cmd>wqa<cr>", { desc = "Quit" })
 
 -- Move lines with Alt+j/k
 map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move Down" })
@@ -26,3 +26,19 @@ map("n", "<C-k>", "<C-w>k", { desc = "Go to Upper Window" })
 
 -- Lazy
 map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
+
+-- LSP keymaps
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(args)
+		local bufnr = args.buf
+		local cmap = function(mode, lhs, rhs, desc)
+			vim.keymap.set(mode, lhs, rhs, { buffer = bufnr, desc = desc })
+		end
+		cmap("n", "gd", vim.lsp.buf.definition, "Go to Definition")
+		cmap("n", "gr", vim.lsp.buf.references, "References")
+		cmap("n", "K", vim.lsp.buf.hover, "Hover")
+		cmap("n", "<leader>ca", vim.lsp.buf.code_action, "Code Action")
+		cmap("n", "<leader>cr", vim.lsp.buf.rename, "Rename")
+		cmap("n", "<leader>cd", vim.diagnostic.open_float, "Line Diagnostics")
+	end,
+})
