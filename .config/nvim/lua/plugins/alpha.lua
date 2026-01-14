@@ -9,3 +9,5 @@ return {
 		require("alpha").setup(require("alpha.themes.theta").config)
 	end,
 }
+
+print("hoge")
