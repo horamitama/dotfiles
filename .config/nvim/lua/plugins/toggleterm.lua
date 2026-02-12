@@ -15,7 +15,7 @@ return {
 		-- 'vertical' (右), 'horizontal' (下), 'tab' (タブ), 'float' (浮く)
 		direction = "float",
 		close_on_exit = true,
-		shell = vim.o.shell,
+		shell = "fish",
 		float_opts = {
 			border = "curved", -- 角丸の枠線
 			winblend = 0,
