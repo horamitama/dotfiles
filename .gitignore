@@ -11,3 +11,23 @@
 /.config/iterm2
 
 node_modules/
+
+# Claude Code - runtime/ephemeral
+/.config/claude/history.jsonl
+/.config/claude/.last-update-result.json
+/.config/claude/mcp-needs-auth-cache.json
+/.config/claude/stats-cache.json
+/.config/claude/cache/
+/.config/claude/debug/
+/.config/claude/session-env/
+/.config/claude/sessions/
+/.config/claude/backups/
+/.config/claude/paste-cache/
+/.config/claude/shell-snapshots/
+/.config/claude/statsig/
+/.config/claude/telemetry/
+/.config/claude/downloads/
+/.config/claude/projects/
+/.config/claude/todos/
+/.config/claude/file-history/
+/.config/claude/plugins/

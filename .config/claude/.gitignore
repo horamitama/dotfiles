@@ -1,0 +1,21 @@
+# Runtime / cache
+history.jsonl
+.last-update-result.json
+mcp-needs-auth-cache.json
+stats-cache.json
+
+# Ephemeral directories
+cache/
+debug/
+session-env/
+sessions/
+backups/
+paste-cache/
+shell-snapshots/
+statsig/
+telemetry/
+downloads/
+
+# Project-specific conversation data
+projects/
+todos/
