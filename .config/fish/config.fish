@@ -9,7 +9,12 @@ alias e exit
 alias c clear
 alias t tmux
 alias k kubectl
+alias kx kubectx
+alias kn kubens
+alias ks kustomize
 alias ls "ls -a"
+alias tf "terraform"
+alias bastion-prod='gcloud compute ssh st-bastion-prod --zone=asia-east1-a --tunnel-through-iap -- -L 33306:172.21.96.18:3306'
 
 # Prompt options
 set -g theme_nerd_fonts yes
@@ -22,6 +27,7 @@ set -g theme_display_node yes
 set -g theme_display_k8s_namespace yes
 set -g theme_display_git yes
 set -g theme_display_git_default_branch yes
+fish_add_path /opt/homebrew/bin
 
 # Right prompt options
 set -g theme_date_format +%m/%d-%H:%M:%S
@@ -35,3 +41,6 @@ export PATH="/opt/homebrew/opt/mysql-client@8.0/bin:$PATH"
 export PATH="/.tfenv/bin:$PATH"
 set -x PATH $HOME/.tfenv/bin $PATH
 export PATH="$HOME/.local/bin:$PATH"
+
+set -gx JAVA_HOME (/usr/libexec/java_home -v 21)
+set -gx PATH $JAVA_HOME/bin $PATH

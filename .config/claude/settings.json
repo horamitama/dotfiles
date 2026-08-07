@@ -1,3 +1,7 @@
 {
-  "theme": "dark-daltonized"
+  "model": "opusplan",
+  "theme": "dark-daltonized",
+  "enabledPlugins": {
+    "vercel@claude-plugins-official": true
+  }
 }
