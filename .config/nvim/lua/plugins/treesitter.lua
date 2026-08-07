@@ -5,6 +5,7 @@ return {
 	config = function()
 		local parsers = {
 			"lua",
+			"java",
 			"typescript",
 			"tsx",
 			"javascript",
@@ -17,6 +18,7 @@ return {
 			"json",
 			"terraform",
 			"hcl",
+			"python",
 		}
 		require("nvim-treesitter").install(parsers)
 

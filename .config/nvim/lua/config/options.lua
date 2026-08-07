@@ -28,3 +28,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- Cursor line highlight
 opt.cursorline = true
+
+-- Disable line wrap
+opt.wrap = false
