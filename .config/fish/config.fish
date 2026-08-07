@@ -34,3 +34,4 @@ end
 export PATH="/opt/homebrew/opt/mysql-client@8.0/bin:$PATH"
 export PATH="/.tfenv/bin:$PATH"
 set -x PATH $HOME/.tfenv/bin $PATH
+export PATH="$HOME/.local/bin:$PATH"
