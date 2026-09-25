@@ -35,3 +35,7 @@ node_modules/
 /.config/claude/todos/
 /.config/claude/file-history/
 /.config/claude/plugins/
+/.config/claude/skills/synced/
+/.config/claude/state/
+/.config/claude/chrome/
+/.config/claude/.last-cleanup
