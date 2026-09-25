@@ -19,3 +19,6 @@ downloads/
 # Project-specific conversation data
 projects/
 todos/
+
+# Per-machine context (symlink to profiles/*/CLAUDE.md)
+CLAUDE.local.md

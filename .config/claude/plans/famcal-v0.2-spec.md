@@ -103,7 +103,7 @@ LLM の自己申告スコアは校正されておらず、閾値を引く根拠�
 
 ```json
 {"children": [
-  {"name": "...", "age_class": "4歳児", "class_name": "いぬ組",
+  {"name": "...", "age_class": "4歳児", "class_name": "コアラぐみ",
    "school": "能登川あおぞら幼児園"}
 ]}
 ```
