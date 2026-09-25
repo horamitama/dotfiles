@@ -33,9 +33,9 @@ fish_add_path /opt/homebrew/bin
 set -g theme_date_format +%m/%d-%H:%M:%S
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/s-nakaue/.gcloud/google-cloud-sdk/path.fish.inc' ]
-    . '/Users/s-nakaue/.gcloud/google-cloud-sdk/path.fish.inc'
-end
+# if [ -f '/Users/s-nakaue/.gcloud/google-cloud-sdk/path.fish.inc' ]
+#     . '/Users/s-nakaue/.gcloud/google-cloud-sdk/path.fish.inc'
+# end
 
 export PATH="/opt/homebrew/opt/mysql-client@8.0/bin:$PATH"
 export PATH="/.tfenv/bin:$PATH"
@@ -44,3 +44,8 @@ export PATH="$HOME/.local/bin:$PATH"
 
 set -gx JAVA_HOME (/usr/libexec/java_home -v 21)
 set -gx PATH $JAVA_HOME/bin $PATH
+
+# Secrets (BITBUCKET_EMAIL, BITBUCKET_API_TOKEN, etc.) live in secrets.fish, which is gitignored.
+if test -f "$__fish_config_dir/secrets.fish"
+    source "$__fish_config_dir/secrets.fish"
+end

@@ -1,3 +1,7 @@
+# --- シェル設定 ---
+# cmux(Ghostty)内のデフォルトシェルをfishにする
+command = /opt/homebrew/bin/fish
+
 # --- フォント設定 ---
 # "Mono" がついているものを選ぶとズレにくいです
 font-family = "Hack Nerd Font Mono"

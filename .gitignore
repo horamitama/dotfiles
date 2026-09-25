@@ -2,6 +2,10 @@
 
 /.config/fish/fish_variables
 
+/.config/fish/secrets.fish
+
+/.config/argocd/config
+
 /.DS_Store
 
 /.config/nvim/lazy-lock.json
