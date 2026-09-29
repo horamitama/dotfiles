@@ -22,6 +22,7 @@ return {
 				"gopls",
 				"terraformls",
 				"pyright",
+				"intelephense",
 			},
 		},
 	},
