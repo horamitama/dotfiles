@@ -39,3 +39,7 @@ node_modules/
 /.config/claude/state/
 /.config/claude/chrome/
 /.config/claude/.last-cleanup
+
+# アプリの一時ファイル・バックアップ
+/.config/cmux/*.cmux-write.lock
+/.config/ghostty/config.bak.*
