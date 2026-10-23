@@ -5,10 +5,23 @@ return {
 		"nvim-tree/nvim-web-devicons",
 		{
 			"SmiteshP/nvim-navic",
-			opts = {
-				lsp = { auto_attach = true },
-				highlight = true,
-			},
+			config = function()
+				local navic = require("nvim-navic")
+				navic.setup({ highlight = true })
+				-- auto_attach だと term:// バッファの URI が LSP に送られ terraform-ls が panic するため通常ファイルに限定
+				vim.api.nvim_create_autocmd("LspAttach", {
+					callback = function(args)
+						local client = vim.lsp.get_client_by_id(args.data.client_id)
+						if
+							client
+							and client:supports_method("textDocument/documentSymbol")
+							and vim.bo[args.buf].buftype == ""
+						then
+							navic.attach(client, args.buf)
+						end
+					end,
+				})
+			end,
 		},
 	},
 	opts = {
