@@ -43,3 +43,4 @@ node_modules/
 # アプリの一時ファイル・バックアップ
 /.config/cmux/*.cmux-write.lock
 /.config/ghostty/config.bak.*
+/.config/intelephense/
