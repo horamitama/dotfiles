@@ -436,5 +436,8 @@
       "focusLeft": "ctrl+cmd+h",
       "focusRight": "ctrl+cmd+l"
     }
+  },
+  "app": {
+    "accentColor": "#00C5FD"
   }
 }

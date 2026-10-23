@@ -5,6 +5,8 @@ command = /opt/homebrew/bin/fish
 # --- フォント設定 ---
 # "Mono" がついているものを選ぶとズレにくいです
 font-family = "Hack Nerd Font Mono"
+# 日本語はヒラギノ角ゴにフォールバック（未指定だと中国語字形のフォントが選ばれることがある）
+font-family = "Hiragino Sans"
 font-size = 14
 
 # --- 背景・透過設定 ---
